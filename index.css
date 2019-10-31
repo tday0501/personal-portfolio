@@ -1,12 +1,12 @@
 :root {
-    --left-background-color: #10193B;
-    --right-background-color: #0F1737;
-    --yellow: #FFEF55;
-    --green: #23A30A;
-    --blue: #1A5AF3;
-    --red: #F31A52;
-    --white: #ffffff;
-    --black: #000000;
+    --left-background-color: rgb(16, 25, 59);
+    --right-background-color: rgb(15, 23, 55);
+    --yellow: rgb(255, 239, 85);
+    --green: rgb(35, 163, 10);
+    --blue: rgb(26, 90, 243);
+    --red: rgb(243, 26, 82);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
 }
 
 
@@ -38,24 +38,28 @@ body {
 #right-column {
     grid-area: right-col;
     background-color: var(--right-background-color);
-    height: 100vh
+    height: 100vh;
 }
 
 /* Left-col setup */
 #left-column {
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 12% 1fr 10%;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". logo ."
-    ". pic ."
-    ". content ."
+    "logo logo ."
+    "counter content ."
     ". cta .";
 }
 
 #logo-container {
     grid-area: logo;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 1rem;
+}
+
+#counter {
+    grid-area: counter;
+    margin-top: 6rem;
 }
 
 #pic {
@@ -66,11 +70,12 @@ body {
 }
 
 .introduction {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 #content-container {
     grid-area: content;
+    margin: 1rem 0 0 1rem;
 }
 
 #cta {
@@ -98,8 +103,9 @@ nav{
 /* left-col style */
 .logo-name {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bolder;
+    margin: 0 1.5rem;
 }
 
 .t {
@@ -118,6 +124,29 @@ nav{
     color: #F31A52
 }
 
+.count {
+    text-align: center;
+    width: .4rem;
+    height: .4rem;
+    border: 1.8px solid var(--white);
+    border-radius: 100%;
+    margin: 1.1rem auto;
+}
+
+.hc{
+    background-color: var(--white);
+}
+
+.arrow-down {
+    border: 1px solid var(--white);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 1.5rem auto;
+}
+
 .image {
     width: 7em;
     height: 7rem;
@@ -126,11 +155,12 @@ nav{
 .main-header {
     font-weight: bolder;
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .introduction {
     width: 90%;
-    line-height: 1.8rem
+    line-height: 1.8rem;
 }
 
 #cta {
@@ -143,15 +173,16 @@ nav{
     ". . . .";
     width: 70%;
     background-color: var(--white);
-    border-radius: 5px;
-    height: 3.2rem;
+    border-radius: 2px;
+    height: 3.5rem;
+    margin-bottom: .7rem;
 }
 
 .message-input, .message-input:focus {
     grid-area: input;
     border: none;
     outline: none;
-    height: 2rem;
+    height: 2.5rem;
     font-size: 1rem;
     color: var(--black)
 }
@@ -159,7 +190,7 @@ nav{
 .lets-talk {
     grid-area: button;
     background-color: var(--red);
-    border-radius: 3px;
+    border-radius: 2px;
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -167,6 +198,11 @@ nav{
 
 .lets-talk:hover {
     background-color: ;
+}
+
+.coffee {
+    font-size: .8rem;
+    cursor: pointer;
 }
 
 /* Right-col style */
