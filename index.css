@@ -183,6 +183,7 @@ nav{
     border: none;
     outline: none;
     height: 2.5rem;
+    width: 13rem;
     font-size: 1rem;
     color: var(--black)
 }
@@ -205,6 +206,10 @@ nav{
     cursor: pointer;
 }
 
+.coffee-cup {
+    width: 3%
+}
+
 /* Right-col style */
 nav {
     display: grid;
@@ -219,7 +224,7 @@ ul {
     list-style-type: none;
 }
 
-.menu-link {
+a {
     text-decoration: none;
 }
 
