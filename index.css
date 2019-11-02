@@ -5,8 +5,12 @@
     --green: rgb(35, 163, 10);
     --blue: rgb(26, 90, 243);
     --red: rgb(243, 26, 82);
+    --dark-red: rgb(221, 20, 72);
+    --orange: rgb(243, 144, 26);
+    --dark-orange: rgb(215, 125, 18);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
+    --color: rgb(0, 0, 0);
 }
 
 
@@ -69,7 +73,7 @@ body {
     margin: 0;
 }
 
-.introduction {
+.body-text {
     margin-bottom: 1.5rem;
 }
 
@@ -158,7 +162,7 @@ nav{
     margin-bottom: 1.5rem;
 }
 
-.introduction {
+.body-text {
     width: 90%;
     line-height: 1.8rem;
 }
@@ -198,7 +202,7 @@ nav{
 }
 
 .lets-talk:hover {
-    background-color: ;
+    background-color: var(--dark-red);
 }
 
 .coffee {
@@ -208,6 +212,22 @@ nav{
 
 .coffee-cup {
     width: 3%
+}
+
+.download {
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 13rem;
+    font-size: 1rem;
+    background-color: var(--orange);
+}
+
+.download:hover {
+    background-color: var(--dark-orange);
 }
 
 /* Right-col style */
