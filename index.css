@@ -24,92 +24,46 @@ body {
     background-color: var(--left-background-color);
     box-sizing: border-box;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+   /*overflow: hidden;--> */
 }
 
 #main-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "left-col right-col";
+    display: flex;
+    flex-direction: column;
 }
 
-#left-column {
-    grid-area: left-col;
-}
-
-#right-column {
-    grid-area: right-col;
+#logo-container{
+    grid-area:header;
     background-color: var(--right-background-color);
-    height: 100vh;
-}
-
-/* Left-col setup */
-#left-column {
-    display: grid;
-    grid-template-columns: 12% 1fr 10%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "logo logo ."
-    "counter content ."
-    ". cta .";
-}
-
-#logo-container {
-    grid-area: logo;
-    margin: 1rem 0 0 1rem;
+    position: sticky;
 }
 
 #counter {
-    grid-area: counter;
-    margin-top: 6rem;
+   display: none;
 }
 
-#pic {
-    grid-area: pic;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-.body-text {
-    margin-bottom: 1.5rem;
-}
-
-#content-container {
+#left-column {
     grid-area: content;
-    margin: 1rem 0 0 1rem;
 }
 
-#cta {
-    grid-area: cta;
-}
+/* Left-col setup */
 
-/* Right-col setup */
-#right-column {
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    ". menu ."
-    ". content-pic .";
-}
-
-nav{
-    grid-area: menu;
-}
-
-#right-content {
-    grid-area: content-pic;
+#home {
+    margin-left: 2.7rem;
 }
 
 /* left-col style */
+#logo {
+    display: flex;
+    align-self: center;
+    margin: 1.5rem 2.7rem;
+}
+
 .logo-name {
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: bolder;
-    margin: 0 1.5rem;
 }
 
 .t {
@@ -128,8 +82,13 @@ nav{
     color: #F31A52
 }
 
+#counter {
+    display: flexbox;
+    justify-content: center;
+    align-self: center;
+}
+
 .count {
-    text-align: center;
     width: .4rem;
     height: .4rem;
     border: 1.8px solid var(--white);
@@ -150,21 +109,17 @@ nav{
     -webkit-transform: rotate(45deg);
     margin: 1.5rem auto;
 }
-
-.image {
-    width: 7em;
-    height: 7rem;
-}
  
 .main-header {
     font-weight: bolder;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin: 5.5rem 0 2rem 0;
 }
 
 .body-text {
-    width: 90%;
+    width: 92%;
     line-height: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 #cta {
@@ -175,11 +130,11 @@ nav{
     ". . . ."
     ". input button ."
     ". . . .";
-    width: 70%;
+    width: 85%;
     background-color: var(--white);
     border-radius: 2px;
     height: 3.5rem;
-    margin-bottom: .7rem;
+    margin-bottom: 1rem;
 }
 
 .message-input, .message-input:focus {
@@ -187,9 +142,9 @@ nav{
     border: none;
     outline: none;
     height: 2.5rem;
-    width: 13rem;
+    width: 12rem;
     font-size: 1rem;
-    color: var(--black)
+    color: var(--black);
 }
 
 .lets-talk {
@@ -206,12 +161,12 @@ nav{
 }
 
 .coffee {
-    font-size: .8rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 .coffee-cup {
-    width: 3%
+    width: 5%
 }
 
 .download {
@@ -256,10 +211,15 @@ a {
     color: #23A30A
 }
 
-.work:hover {
+.work-btn:hover {
     color: #1A5AF3
 }
 
 .contact:hover {
     color: #F31A52
+}
+
+#right-home {
+    background-color: var(--right-background-color);
+    height: 100vh;
 }
